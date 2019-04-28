@@ -1,0 +1,40 @@
+<html>
+
+<head>
+
+<title>Ger Killeen: Digital Poetry</title>
+
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+
+<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+
+</head>
+
+<body style='margin:0px; overflow:hidden; width: auto; height: auto;'>
+
+<a-scene>
+  <a-assets>
+	<video id="portfolio-vid" autoplay loop="true" src="https://res.cloudinary.com/creative-web-solutions-llc/video/upload/v1555787929/VRAssets/Little_Houses_Text-Image_Poetry.mp4"></video>
+    <a-mixin id="name" text="anchor:left; align: left; width: 4; value: Ger Killeen"></a-mixin>
+    <a-mixin id="title" text="anchor:left; align:left; width: 2; value: Digital Poetry in Augmented Reality"></a-mixin>
+    <img id="avatar" src="https://res.cloudinary.com/creative-web-solutions-llc/image/upload/v1555781554/samples/people/gerText1big.png">
+  </a-assets>
+
+<a-image src="#avatar" position="-0.976 2 -1.5" opacity="0.5"></a-image>
+  <!--a-plane color="#FFF" position="-0.976 1.997 -1.611" rotation="0 0 0" height="1.2" width="1.2"></a-plane-->
+   <a-plane id="namebg" color="#000" position="1 1.997 -1.611" rotation="0 0 0" height="1.2" width="2.5" opacity="0.5"></a-plane>
+    <!--a-plane id="large-black"color="#000" ../.position="3.119 1.997 -0.742" rotation="0 -45 0" height="2" width="2.5" opacity="0.5"></a-plane-->
+  <!--a-plane color="#FFF" position="0 0 0" rotation="-60 0 0" height="0.8" width="4.5" opacity="1" text="anchor:center; align:center; color:black; width: 8; value: gerkilleen.net/poet.html"></a-plane-->
+  <a-text mixin="name" position="0 2.3 -1.5" wrap-count="20"></a-text>
+   <a-text mixin="title" position="0 1.8 -1.5" wrap-count="15"></a-text>
+<a-video src="#portfolio-vid" width="16" height="16" position="0 0 0" rotation="-60 0 0" scale="0.200 0.200 0.200" opacity="0.3"></a-video>
+<!--<a-sky color="#3CF"></a-sky>-->
+  	<a-marker-camera preset='hiro'></a-marker-camera>
+ <!--<a-entity position="0 2 3.7">
+    <a-entity camera look-controls wasd-controls></a-entity>-->
+  </a-entity>
+</a-scene>
+</body>
+
+</html>
